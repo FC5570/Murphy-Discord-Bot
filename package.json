@@ -4,6 +4,7 @@
   "description": "A bot made for a bot jam event of Salvage's Oasis",
   "main": "index.js",
   "dependencies": {
+    "canvacord": "^5.0.8",
     "discord-akairo": "^8.1.0",
     "discord.js": "^12.5.1",
     "got": "^11.8.1",

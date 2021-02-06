@@ -29,6 +29,8 @@ class helpCommand extends Command {
   }
 
   async exec(message, { command }) {
+    const msg = await message.channel.send("help yourself\n\njkjk");
+    await msg.delete();
     if (command) {
       let userPerms = command.userPermissions.join(", ");
       if (userPerms === "ownerOnly") userPerms = "Owner Only";
@@ -66,7 +68,9 @@ class helpCommand extends Command {
       return message.channel.send(embed1);
     }
 
-    const owner = await this.client.users.fetch(this.client.ownerID).then(m => m.tag)
+    const owner = await this.client.users
+      .fetch(this.client.ownerID)
+      .then((m) => m.tag);
     const embed = new MessageEmbed()
       .setTitle("Help is here!")
       .setColor("RANDOM")
@@ -82,6 +86,7 @@ class helpCommand extends Command {
 
     for (const category of this.handler.categories.values()) {
       if (["default"].includes(category.id)) continue;
+      console.log(category);
       embed.addField(
         category.id,
         category.map((c) => `${c}`).join(", ") ||
@@ -91,10 +96,10 @@ class helpCommand extends Command {
     return message.channel.send(embed);
 
     function firstUpperCase(text, split = " ") {
-            return text
-              .split(split)
-              .map((word) => `${word.charAt(0).toUpperCase()}${word.slice(1)}`)
-              .join(" ");
+      return text
+        .split(split)
+        .map((word) => `${word.charAt(0).toUpperCase()}${word.slice(1)}`)
+        .join(" ");
     }
   }
 }
