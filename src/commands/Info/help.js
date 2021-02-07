@@ -47,14 +47,13 @@ class helpCommand extends Command {
           : "No aliases for this command"
       }\n**Description:** ${
         command.description.content || "No Description."
-      }\n**Usage:** ${
-        command.description.usage || "No Usage"
-      }\n**Cooldown:** ${ms(command.cooldown, { long: true })}\n**Category:** ${
+      }\n**Usage:** ${this.client.commandHandler.prefix}${command.description.usage || "No Usage" }
+      \n**Cooldown:** ${ms(command.cooldown, { long: true })}\n**Category:** ${
         command.category || "No Category"
       }\n\n**Examples:**\n ${
         command.description.example
           ? command.description.example
-              .map((m, i) => `**${i + 1}**: ${m}`)
+              .map((m, i) => `**${i + 1}**: ${this.client.commandHandler.prefix}${m}`)
               .join("\n")
           : "No Examples."
       }\n\n**Bot Permissions:** ${
@@ -75,7 +74,7 @@ class helpCommand extends Command {
       .setTitle("Help is here!")
       .setColor("RANDOM")
       .setDescription(
-        `**Murphy's Default prefix is \`${this.client.commandHandler.prefix}\`**\nUse \`,help <command name>\` to get Info about a specific command. Example: \`,help ping\`.\nIf you still need help, dm **${owner}**.`
+        `**Murphy's Default prefix is \`${this.client.commandHandler.prefix}\`**\nUse \`,help <command name>\` to get Info about a specific command. Example: \`,help ping\`.\nIf you still need help, dm **${owner}**.\n**PS** Examples in certain commands have names of friends, this is just a joke, don\'t take it seriously`
       )
       .setFooter(`Total Commands - ${this.client.commandHandler.modules.size}`)
       .setAuthor(
@@ -86,7 +85,6 @@ class helpCommand extends Command {
 
     for (const category of this.handler.categories.values()) {
       if (["default"].includes(category.id)) continue;
-      console.log(category);
       embed.addField(
         category.id,
         category.map((c) => `${c}`).join(", ") ||

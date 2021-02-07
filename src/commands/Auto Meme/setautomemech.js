@@ -14,7 +14,7 @@ class SetAutoMemeCh extends Command {
         example: ["setautomemech #auto-memes 5m", "setautomemech #memes 15s"],
       },
       clientPermissions: [
-        "VIEW_CHANNELS",
+        "VIEW_CHANNEL",
         "READ_MESSAGE_HISTORY",
         "EMBED_LINKS",
       ],
@@ -26,7 +26,7 @@ class SetAutoMemeCh extends Command {
       args: [
         {
           id: "channel",
-          type: "channelMention",
+          type: "channel",
         },
         {
           id: "time",

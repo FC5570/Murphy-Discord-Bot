@@ -10,7 +10,7 @@ class RemoveAuto extends Command {
         example: ["removeautomemech"],
       },
       clientPermissions: [
-        "VIEW_CHANNELS",
+        "VIEW_CHANNEL",
         "READ_MESSAGE_HISTORY",
         "EMBED_LINKS",
       ],
