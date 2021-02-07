@@ -47,13 +47,18 @@ class helpCommand extends Command {
           : "No aliases for this command"
       }\n**Description:** ${
         command.description.content || "No Description."
-      }\n**Usage:** ${this.client.commandHandler.prefix}${command.description.usage || "No Usage" }
+      }\n**Usage:** ${this.client.commandHandler.prefix}${
+        command.description.usage || "No Usage"
+      }
       \n**Cooldown:** ${ms(command.cooldown, { long: true })}\n**Category:** ${
         command.category || "No Category"
       }\n\n**Examples:**\n ${
         command.description.example
           ? command.description.example
-              .map((m, i) => `**${i + 1}**: ${this.client.commandHandler.prefix}${m}`)
+              .map(
+                (m, i) =>
+                  `**${i + 1}**: ${this.client.commandHandler.prefix}${m}`
+              )
               .join("\n")
           : "No Examples."
       }\n\n**Bot Permissions:** ${
