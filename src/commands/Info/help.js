@@ -7,8 +7,7 @@ class helpCommand extends Command {
     super("help", {
       aliases: ["help", "commands", "cmds"],
       description: {
-        content:
-          "Shows the list of commands the bot has. Use help <command> for help on a specific command",
+        content: "self explainatory",
         examples: ["help", "help [command]"],
         usage: "help",
       },
@@ -79,7 +78,7 @@ class helpCommand extends Command {
       .setTitle("Help is here!")
       .setColor("RANDOM")
       .setDescription(
-        `**Murphy's Default prefix is \`${this.client.commandHandler.prefix}\`**\nUse \`,help <command name>\` to get Info about a specific command. Example: \`,help ping\`.\nIf you still need help, dm **${owner}**.\n**PS** Examples in certain commands have names of friends, this is just a joke, don\'t take it seriously`
+        `**Murphy's Default prefix is \`${this.client.commandHandler.prefix}\`**\nUse \`,help <command name>\` to get Info about a specific command. Example: \`,help ping\`.\nIf you still need help, dm **${owner}**.\n**PS Examples in certain commands have names of my friends and some funny examples, this is just a joke, don\'t take it seriously**`
       )
       .setFooter(`Total Commands - ${this.client.commandHandler.modules.size}`)
       .setAuthor(
