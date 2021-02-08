@@ -29,7 +29,7 @@ class helpCommand extends Command {
   }
 
   async exec(message, { command }) {
-    const msg = await message.channel.send("help yourself\n\njkjk");
+    const msg = await message.channel.send("help yourself");
     await msg.delete();
     if (command) {
       let userPerms = command.userPermissions.join(", ");
