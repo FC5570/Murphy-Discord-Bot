@@ -1,6 +1,6 @@
 {
-  "token": "Nzg5MDY5NjQ0MjUzMTAyMDkw.X9ssXw.AFQOZ_cf2qqHFz0ZyVgGVtvHDUk",
-  "mongoURI": "mongodb+srv://Murphy:MurphyBotJam@murphy-bot-jam-2.z1lbk.mongodb.net/Murphy?retryWrites=true&w=majority",
+  "token": "your token",
+  "mongoURI": "cluster uri",
   "prefix": "m!",
   "ownerID": "712560683216011274"
 }
