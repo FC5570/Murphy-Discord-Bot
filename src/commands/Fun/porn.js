@@ -8,7 +8,7 @@ class kek extends Command {
       description: {
         content: "😏",
         usage: "porn [request/query]",
-        examples: ["porn"],
+        example: ["porn"],
       },
       category: "Fun",
       clientPermissions: ["SEND_MESSAGES"],
@@ -24,9 +24,9 @@ class kek extends Command {
 
     try {
     message.member.send(attach)
+    message.channel.send("check your dms 😏")
     await delay(7000)
     message.member.send('get rickrolled you greedy bitch')
-    message.channel.send("check your dms 😏")
     } catch(e) {
       console.log(e)
       return message.channel.send("how do you expect me to send porn to you if your dms are not enabled smh")

@@ -8,7 +8,7 @@ class helpCommand extends Command {
       aliases: ["help", "commands", "cmds"],
       description: {
         content: "self explainatory",
-        examples: ["help", "help [command]"],
+        example: ["help", "help [command]"],
         usage: "help",
       },
       clientPermissions: ["EMBED_LINKS", "SEND_MESSAGES"],
@@ -51,7 +51,7 @@ class helpCommand extends Command {
       }
       \n**Cooldown:** ${ms(command.cooldown, { long: true })}\n**Category:** ${
         command.category || "No Category"
-      }\n\n**Examples:**\n ${
+      }\n\n**Exampless:**\n ${
         command.description.example
           ? command.description.example
               .map(
@@ -59,7 +59,7 @@ class helpCommand extends Command {
                   `**${i + 1}**: ${this.client.commandHandler.prefix}${m}`
               )
               .join("\n")
-          : "No Examples."
+          : "No examples."
       }\n\n**Bot Permissions:** ${
         firstUpperCase(
           command.clientPermissions.join(", ").toLowerCase().replace(/_/gi, " ")
@@ -78,7 +78,7 @@ class helpCommand extends Command {
       .setTitle("Help is here!")
       .setColor("RANDOM")
       .setDescription(
-        `**Murphy's Default prefix is \`${this.client.commandHandler.prefix}\`**\nUse \`,help <command name>\` to get Info about a specific command. Example: \`,help ping\`.\nIf you still need help, dm **${owner}**.\n**PS Examples in certain commands have names of my friends and some funny examples, this is just a joke, don\'t take it seriously**`
+        `**Murphy's Default prefix is \`${this.client.commandHandler.prefix}\`**\nUse \`,help <command name>\` to get Info about a specific command. Example: \`,help ping\`.\nIf you still need help, dm **${owner}**.\n**PS example in certain commands have names of my friends and some funny example, this is just a joke, don\'t take it seriously**`
       )
       .setFooter(`Total Commands - ${this.client.commandHandler.modules.size}`)
       .setAuthor(

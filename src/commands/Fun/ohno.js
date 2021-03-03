@@ -9,7 +9,7 @@ class OhFuck extends Command {
       description: {
         content: "oh no! its stupid",
         usage: "ohno [message]",
-        examples: ["ohno we're fucked", "ohno"],
+        example: ["ohno we're fucked", "ohno"],
       },
       category: "Fun",
       clientPermissions: ["SEND_MESSAGES"],

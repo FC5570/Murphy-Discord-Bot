@@ -9,7 +9,7 @@ class BedCommand extends Command {
       description: {
         content: "why do you hate me ~~bitch~~ brother",
         usage: "bed [@user]",
-        examples: ["bed @Noobie", "bed"],
+        example: ["bed @Noobie", "bed"],
       },
       clientPermissions: ["SEND_MESSAGES", "EMBED_LINKS"],
       userPermissions: [],

@@ -1,4 +1,4 @@
-const Canvacord = require("Canvacord");
+const Canvacord = require("canvacord");
 const { Command } = require("discord-akairo");
 const { MessageAttachment } = require("discord.js");
 
@@ -17,7 +17,7 @@ class FusionCommand extends Command {
       description: {
         content: "Overlaps avatars of 2 users",
         usage: "fusion [@user1] [@user2]",
-        examples: [
+        example: [
           "fusion @Shamil @Beatzoid",
           "fusion",
           "fusion @Korabi @His gf",
